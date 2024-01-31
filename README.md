@@ -26,7 +26,7 @@ In there:
     2. The number of files containing abnormal codes and the list of them
 - You missed the summary on the console? Don't worry, it also created a **Summary \<MONTH\>.txt** with the exact information in the output folder
 - The folder **Cisco logs review** will be created (if not existed) in the location where you run the command, and the detail of abnormal lines will be in there for your manually further review<br>
--> You can change the result location at the *line 6*
+-> You can change the result location at *line 6* in the script
 
 ### Detect_abnormal_Draytek.py
 
@@ -47,7 +47,7 @@ In there:
     2. The number of files containing abnormal codes and the list of them
 - You missed the summary on the console? Don't worry, it also created a **Summary \<MONTH\>.txt** with the exact information in the output folder
 - The folder **Draytek logs review** will be created (if not existed) in the location where you run the command, and the detail of abnormal lines will be in there for your manually further review<br>
--> You can change the result location at the *line 6*
+-> You can change the result location at *line 6* in the script
 
 ### Remove_strings.py
 
@@ -67,5 +67,5 @@ In there:
 > Result
 
 - After the script is done, a folder **Removing strings result** with the exact directory tree of `<root_path>` but new files inside, will appear in the location where you run the command<br>
--> You can change the result location at the *line 12*
+-> You can change the result location at *line 12* in the script
 
