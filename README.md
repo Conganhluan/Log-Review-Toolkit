@@ -17,7 +17,7 @@ In there:
 - `<folder_path>` is the path to the folder of MONTH with the name format as **Cisco_Log_Feb23**
 -> If your `<folder_path>` have different format, it is suggested to review *line 12* in the script
 - `<normal_code_1>`, `<normal_code_2>`,... are strings considered as normal. Lines that contain these strings will be passed during the review process<br>
--> If you don't input these `<normal_code>`, the default code list will be applied. Look over *line 23* in the script
+-> If you don't input these `<normal_code>`, the default code list will be applied. Look over *line 23* in the script for the default code list
 
 > Result
 
@@ -38,7 +38,7 @@ In there:
 - `<folder_path>` is the path to the folder of MONTH with the name format as **Draytek_SysLog_Feb2023**<br>
 -> If your `<folder_path>` have different format, it is suggested to review *line 12* in the script
 - `<normal_code_1>`, `<normal_code_2>`,... are strings considered as normal. Lines that contain these strings will be passed during the review process<br>
--> If you don't input these `<normal_code>`, the default code list will be applied. Look over *line 23* in the script
+-> If you don't input these `<normal_code>`, the default code list will be applied. Look over *line 23* in the script for the default code list
 
 > Result
 
@@ -68,3 +68,4 @@ In there:
 
 - After the script is done, a folder **Removing strings result** with the exact directory tree of `<root_path>` but new files inside, will appear in the location where you run the command<br>
 -> You can change the result location at the *line 12*
+
