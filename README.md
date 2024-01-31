@@ -89,3 +89,25 @@ They can run parallelly to each other including themselves, therefore you can cr
 -> You can change the result location at ***line 11*** in the script
 - There are binary files (such as btmp, wtmp) that cannot be read, they will be missed. But don't worry, their name will be informed on the console and in the file **Special files.txt** in the output folder.
 - Any files don't have the time format as the script expect will be passed unconditionally, but their name wil be informed as binary files too
+
+### Detect_date_Kali.py
+
+> Usage
+
+`python Detect_date_Kali.py <root_path> <log year>`
+
+- `<root_path>` is the path of the root folder of Kali logs as the example below:  
+\<root_path\>  
+├───apt  
+├───glusterfs  
+├───inetsim  
+│   └───report  
+├───installer  
+│   └───cdebconf  
+├───unattended-upgrades  
+└───xen
+- `log year` is the year of logs, which will let the script know if February has 29th
+
+> Result
+
+- The missing dates will be listed on the console and in the file **Missing dates.txt** in the location where you run the command

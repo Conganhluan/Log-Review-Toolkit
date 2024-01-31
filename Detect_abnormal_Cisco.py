@@ -11,7 +11,7 @@ if not exists(result_folder):
 path = sys.argv[1]
 print("\nPath: " + path)
 the_month = path[-5:-2]
-the_year = path[-2:]
+the_year = int(path[-2:])
 
 # Get the file list
 file_list = listdir(path)
