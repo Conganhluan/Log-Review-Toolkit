@@ -82,3 +82,5 @@ summary_file.write(statement + "\n\n")
 statement = "There are " + str(len(abnormal_file_list)) + " files having abnormal codes: \n" + "\n".join(abnormal_file_list)
 print(statement)
 summary_file.write(statement)
+
+summary_file.close()
