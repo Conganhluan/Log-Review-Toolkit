@@ -2,9 +2,10 @@ from os import mkdir, listdir
 from os.path import join, exists
 import sys
 
-# Create the review folder
-if not exists("Draytek logs review"):
-    mkdir("Draytek logs review")
+# Create the result folder
+result_folder = "Draytek logs review"
+if not exists(result_folder):
+    mkdir(result_folder)
 
 # Read the folder path
 path = sys.argv[1]
@@ -59,7 +60,7 @@ for file_index in range(file_list_size):
                     is_normal = True
                     break
             if not is_normal:
-                with open(join("Draytek logs review", file_list[file_index]), "a") as result_file:
+                with open(join(result_folder, file_list[file_index]), "a") as result_file:
                     result_file.write(line)
                 if file_list[file_index] not in abnormal_file_list:
                     abnormal_file_list.append(file_list[file_index])
@@ -72,7 +73,7 @@ for file_index in range(file_list_size):
 
 # Summary
 print("\n\nSummary:")
-summary_file = open(join("Draytek logs review", "Summary " + the_month + ".txt"), "w")
+summary_file = open(join(result_folder, "Summary " + the_month + ".txt"), "w")
 
 statement = "There are " + str(len(DATES)) + " missing dates: " + ', '.join(DATES)
 print(statement, end="\n\n")

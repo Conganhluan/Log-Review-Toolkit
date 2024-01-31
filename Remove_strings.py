@@ -9,7 +9,7 @@ folder_list = [folder for folder in listdir(root_path) if isdir(join(root_path,f
 print("\nRoot path: "  + root_path)
 
 # Create the result path
-result_path = join(root_path, "Result")
+result_path = "Removing strings result"
 print("Result path: " + result_path)
 if not exists(result_path):
     mkdir(result_path)
