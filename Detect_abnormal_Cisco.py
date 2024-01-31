@@ -11,6 +11,7 @@ if not exists(result_folder):
 path = sys.argv[1]
 print("\nPath: " + path)
 the_month = path[-5:-2]
+the_year = path[-2:]
 
 # Get the file list
 file_list = listdir(path)
@@ -35,7 +36,7 @@ elif not normal_code_list:
 
 # Create dates
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+DAYS = [31, 29 if the_year%4==0 else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 DATES = [MONTHS[idx]+" "+f"{day:2}" for idx in range(12) if MONTHS[idx]==the_month for day in range(1,DAYS[idx]+1)]
 
 # Prepare abnormal file list

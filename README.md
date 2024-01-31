@@ -14,9 +14,9 @@ They can run parallelly to each other including themselves, therefore you can cr
 `python Detect_abnormal_Cisco.py <folder_path> <normal_code_1> <normal_code_2> ...`
 
 - `<folder_path>` is the path to the folder of MONTH with the name format as **Cisco_Log_Feb23**
--> If your `<folder_path>` have different format, it is suggested to review *line 12* in the script
+-> If your `<folder_path>` have different format, it is suggested to review ***line 12 and 13*** in the script
 - `<normal_code_1>`, `<normal_code_2>`,... are strings considered as normal. Lines that contain these strings will be passed during the review process  
--> If you don't input these `<normal_code>`, the default code list will be applied. Look over *line 23* in the script for the default code list
+-> If you don't input these `<normal_code>`, the default code list will be applied. Look over ***line 23*** in the script for the default code list
 
 > Result
 
@@ -25,7 +25,7 @@ They can run parallelly to each other including themselves, therefore you can cr
     2. The number of files containing abnormal codes and the list of them
 - You missed the summary on the console? Don't worry, it also created a **Summary \<MONTH\>.txt** with the exact information in the output folder
 - The folder **Cisco logs review** will be created (if not existed) in the location where you run the command, and the detail of abnormal lines will be in there for your manually further review  
--> You can change the result location at *line 6* in the script
+-> You can change the result location at ***line 6*** in the script
 
 ### Detect_abnormal_Draytek.py
 
@@ -34,9 +34,9 @@ They can run parallelly to each other including themselves, therefore you can cr
 `python Detect_abnormal_Draytek.py <folder_path> <normal_code_1> <normal_code_2> ...`
 
 - `<folder_path>` is the path to the folder of MONTH with the name format as **Draytek_SysLog_Feb2023**  
--> If your `<folder_path>` have different format, it is suggested to review *line 12* in the script
+-> If your `<folder_path>` have different format, it is suggested to review ***line 12 and 13*** in the script
 - `<normal_code_1>`, `<normal_code_2>`,... are strings considered as normal. Lines that contain these strings will be passed during the review process  
--> If you don't input these `<normal_code>`, the default code list will be applied. Look over *line 23* in the script for the default code list
+-> If you don't input these `<normal_code>`, the default code list will be applied. Look over ***line 23*** in the script for the default code list
 
 > Result
 
@@ -45,7 +45,7 @@ They can run parallelly to each other including themselves, therefore you can cr
     2. The number of files containing abnormal codes and the list of them
 - You missed the summary on the console? Don't worry, it also created a **Summary \<MONTH\>.txt** with the exact information in the output folder
 - The folder **Draytek logs review** will be created (if not existed) in the location where you run the command, and the detail of abnormal lines will be in there for your manually further review  
--> You can change the result location at *line 6* in the script
+-> You can change the result location at ***line 6*** in the script
 
 ### Remove_strings.py
 
@@ -64,7 +64,7 @@ They can run parallelly to each other including themselves, therefore you can cr
 > Result
 
 - After the script is done, a folder **Removing strings result** with the exact directory tree of `<root_path>` but new files inside, will appear in the location where you run the command  
--> You can change the result location at *line 12* in the script
+-> You can change the result location at ***line 12*** in the script
 
 ### Cut_latest_year_Kali.py
 
@@ -85,6 +85,7 @@ They can run parallelly to each other including themselves, therefore you can cr
 
 > Result
 
-- In the location where you run the command, the folder **Cut latest year result** will appear with the exact directory tree as `<root_path>` but the new files and folders inside
+- In the location where you run the command, the folder **Cut latest year result** will appear with the exact directory tree as `<root_path>` but the new files and folders inside  
+-> You can change the result location at ***line 11*** in the script
 - There are binary files (such as btmp, wtmp) that cannot be read, they will be missed. But don't worry, their name will be informed on the console and in the file **Special files.txt** in the output folder.
 - Any files don't have the time format as the script expect will be passed unconditionally, but their name wil be informed as binary files too
