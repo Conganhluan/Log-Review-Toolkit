@@ -1,9 +1,9 @@
-from os import mkdir, listdir
+from os import mkdir, listdir, getcwd
 from os.path import join, exists
 import sys
 
 # Create the result folder
-result_folder = "Draytek logs review"
+result_folder = join(getcwd(),"Draytek logs review")
 if not exists(result_folder):
     mkdir(result_folder)
 

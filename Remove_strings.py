@@ -1,4 +1,4 @@
-from os import listdir, mkdir
+from os import listdir, mkdir, getcwd
 from os.path import join, isdir, exists
 from functools import reduce
 import sys
@@ -9,7 +9,7 @@ folder_list = [folder for folder in listdir(root_path) if isdir(join(root_path,f
 print("\nRoot path: "  + root_path)
 
 # Create the result path
-result_path = "Removing strings result"
+result_path = join(getcwd(),"Removing strings result")
 print("Result path: " + result_path)
 if not exists(result_path):
     mkdir(result_path)
